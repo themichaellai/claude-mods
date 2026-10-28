@@ -1,0 +1,5 @@
+{
+  "name": "michael-mods",
+  "owner": { "name": "Michael Lai" },
+  "plugins": [{ "name": "quote-selection", "source": "./quote-selection" }]
+}

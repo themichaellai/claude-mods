@@ -1,0 +1,6 @@
+{
+  "name": "quote-selection",
+  "version": "0.1.0",
+  "description": "Quote text you select in the transcript into the prompt box as a markdown blockquote",
+  "types": "./types/index.d.ts"
+}

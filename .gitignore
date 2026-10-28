@@ -1,0 +1,9 @@
+# Type declarations Claude Code writes for each Claude Code version
+**/.claude-plugin/types/
+# Where Claude Code unpacks MCP bundles
+.mcpb-cache/
+
+.DS_Store
+*.log
+*.swp
+*~
