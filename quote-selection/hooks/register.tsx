@@ -62,6 +62,17 @@ export const register: Register = (on) => {
     return next(e);
   });
 
+  // A key press takes the highlight off the screen, but `$.ui.selection()`
+  // still returns the old text. Treat that text as dismissed so the band hides.
+  on("prompt.edit", async ($, e, next) => {
+    const result = await next(e);
+    const text = await read($, selection);
+    if (text !== null) {
+      await update($, handled, () => text);
+    }
+    return result;
+  });
+
   on("command.run", { command: "quote" }, async ($) => ({
     text: (await quoteSelection($)) ?? "Quote added to the prompt box.",
   }));
